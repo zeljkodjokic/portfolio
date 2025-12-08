@@ -42,10 +42,18 @@
 	font-style: normal;
 	font-display: swap;
 }
-body {
-	font-family: "Atkinson", sans-serif;
+* {
+	box-sizing: border-box;
+}
+
+html, body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Atkinson", sans-serif;
 	text-align: left;
 	background: white;
 	color: rgb(var(--gray-dark));
@@ -54,9 +62,6 @@ body {
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-[data-theme="dark"] body {
-	background: #0a0e1a;
-}
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);

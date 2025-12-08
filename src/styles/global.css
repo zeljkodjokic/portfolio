@@ -20,6 +20,11 @@
 	--telecom-primary: #FF6B35;
 	--telecom-secondary: #004E89;
 	--telecom-accent: #00D9FF;
+	
+	/* Scouting theme */
+	--scouting-primary: #2D5016;
+	--scouting-secondary: #8B6F47;
+	--scouting-accent: #90EE90;
 }
 
 /* Dark mode */
@@ -34,6 +39,11 @@
 	--telecom-primary: #00D9FF;
 	--telecom-secondary: #FF6B35;
 	--telecom-accent: #00FF88;
+	
+	/* Scouting theme dark mode */
+	--scouting-primary: #90EE90;
+	--scouting-secondary: #D4AF85;
+	--scouting-accent: #2D5016;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +57,10 @@
 		--telecom-primary: #00D9FF;
 		--telecom-secondary: #FF6B35;
 		--telecom-accent: #00FF88;
+		
+		--scouting-primary: #90EE90;
+		--scouting-secondary: #D4AF85;
+		--scouting-accent: #2D5016;
 	}
 }
 @font-face {

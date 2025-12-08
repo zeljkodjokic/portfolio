@@ -35,15 +35,10 @@
 	--gray-dark: 210, 215, 225;
 	--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
 	
-	/* Telecom theme dark mode */
-	--telecom-primary: #00D9FF;
+	/* Telecom theme dark mode - ZELENA UMJESTO PLAVE */
+	--telecom-primary: #00FF88;
 	--telecom-secondary: #FF6B35;
-	--telecom-accent: #00FF88;
-	
-	/* Scouting theme dark mode */
-	--scouting-primary: #90EE90;
-	--scouting-secondary: #D4AF85;
-	--scouting-accent: #2D5016;
+	--telecom-accent: #2D5016;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,13 +49,10 @@
 		--gray-dark: 210, 215, 225;
 		--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
 		
-		--telecom-primary: #00D9FF;
+		/* Telecom theme dark mode - ZELENA */
+		--telecom-primary: #00FF88;
 		--telecom-secondary: #FF6B35;
-		--telecom-accent: #00FF88;
-		
-		--scouting-primary: #90EE90;
-		--scouting-secondary: #D4AF85;
-		--scouting-accent: #2D5016;
+		--telecom-accent: #2D5016;
 	}
 }
 @font-face {
@@ -82,13 +74,15 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+	background: white;
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+	background: #0a0e1a;
 }
 main {
 	width: 720px;

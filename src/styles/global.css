@@ -15,6 +15,39 @@
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
+	
+	/* Telecom theme light mode */
+	--telecom-primary: #FF6B35;
+	--telecom-secondary: #004E89;
+	--telecom-accent: #00D9FF;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+	--black: 240, 240, 245;
+	--gray: 150, 150, 160;
+	--gray-light: 30, 35, 45;
+	--gray-dark: 210, 215, 225;
+	--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
+	
+	/* Telecom theme dark mode */
+	--telecom-primary: #00D9FF;
+	--telecom-secondary: #FF6B35;
+	--telecom-accent: #00FF88;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--black: 240, 240, 245;
+		--gray: 150, 150, 160;
+		--gray-light: 30, 35, 45;
+		--gray-dark: 210, 215, 225;
+		--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
+		
+		--telecom-primary: #00D9FF;
+		--telecom-secondary: #FF6B35;
+		--telecom-accent: #00FF88;
+	}
 }
 @font-face {
 	font-family: "Atkinson";

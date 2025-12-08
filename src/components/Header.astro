@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -7,7 +8,6 @@ import { SITE_TITLE } from '../consts';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Početna</HeaderLink>
 			<HeaderLink href="/about">O meni</HeaderLink>
 			<HeaderLink href="/portfolio">Portfolio</HeaderLink>
 			<HeaderLink href="/radio">Radio amaterizam</HeaderLink>
@@ -17,7 +17,9 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/gallery">Galerija</HeaderLink>
 			<HeaderLink href="/contact">Kontakt</HeaderLink>
 		</div>
-		<div class="social-links">
+		<div class="header-actions">
+			<ThemeToggle />
+			<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -46,6 +48,7 @@ import { SITE_TITLE } from '../consts';
 				>
 			</a>
 		</div>
+		</div>
 	</nav>
 </header>
 <style>
@@ -54,7 +57,14 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		transition: background-color 0.3s ease, color 0.3s ease;
 	}
+
+	[data-theme="dark"] header {
+		background: #1a1a2e;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -63,29 +73,79 @@ import { SITE_TITLE } from '../consts';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: var(--telecom-primary);
+		font-weight: bold;
 	}
+
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 1em;
 	}
+
+	.internal-links {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: rgb(var(--gray-dark));
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		transition: all 0.3s ease;
 	}
+
+	nav a:hover {
+		color: var(--telecom-primary);
+	}
+
 	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+		color: var(--telecom-primary);
+		border-bottom-color: var(--telecom-primary);
+		font-weight: 600;
 	}
+
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+
 	.social-links,
 	.social-links a {
 		display: flex;
+		gap: 0.5em;
+		align-items: center;
 	}
+
+	.social-links a {
+		color: rgb(var(--gray-dark));
+		transition: color 0.3s ease;
+	}
+
+	.social-links a:hover {
+		color: var(--telecom-primary);
+	}
+
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
 		}
+
+		.internal-links {
+			flex-direction: column;
+			gap: 0;
+			width: 100%;
+		}
+
+		nav {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 	}
 </style>

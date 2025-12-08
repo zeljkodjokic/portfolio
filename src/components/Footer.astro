@@ -97,15 +97,14 @@ const today = new Date();
 
 <style>
 	footer {
-		background: white;
-		color: rgb(var(--gray-dark));
+		background: var(--telecom-primary);
+		color: white;
 		border-top: 3px solid var(--telecom-primary);
 		transition: background-color 0.3s ease;
 	}
 
 	[data-theme="dark"] footer {
-		background: #1a1a2e;
-		color: rgb(var(--gray-dark));
+		display: none;
 	}
 
 	.footer-container {
@@ -126,25 +125,26 @@ const today = new Date();
 	.footer-section h3 {
 		margin: 0;
 		font-size: 1.2em;
-		color: var(--telecom-primary);
+		color: white;
 		font-weight: 600;
 	}
 
 	.footer-section p {
 		margin: 0;
-		color: rgb(var(--gray-dark));
+		color: rgba(255, 255, 255, 0.9);
 		font-size: 0.95em;
 		line-height: 1.5;
 	}
 
 	.footer-section p a {
-		color: var(--telecom-primary);
+		color: white;
 		text-decoration: none;
 		transition: all 0.3s ease;
 	}
 
 	.footer-section p a:hover {
 		text-decoration: underline;
+		color: var(--telecom-accent);
 	}
 
 	.footer-section .location {
@@ -162,7 +162,7 @@ const today = new Date();
 	}
 
 	.footer-section ul li a {
-		color: rgb(var(--gray-dark));
+		color: rgba(255, 255, 255, 0.85);
 		text-decoration: none;
 		transition: all 0.3s ease;
 		display: inline-flex;
@@ -171,7 +171,7 @@ const today = new Date();
 	}
 
 	.footer-section ul li a:hover {
-		color: var(--telecom-primary);
+		color: var(--telecom-accent);
 		margin-left: 0.3em;
 	}
 
@@ -187,31 +187,31 @@ const today = new Date();
 		justify-content: center;
 		width: 40px;
 		height: 40px;
-		background: rgba(var(--gray-light), 0.1);
+		background: rgba(255, 255, 255, 0.15);
 		border-radius: 50%;
-		color: rgb(var(--gray-dark));
+		color: white;
 		transition: all 0.3s ease;
 		text-decoration: none;
 		border: 2px solid transparent;
 	}
 
 	.social-links a:hover {
-		background: var(--telecom-primary);
-		color: white;
-		border-color: var(--telecom-primary);
+		background: rgba(255, 255, 255, 0.25);
+		color: var(--telecom-accent);
+		border-color: white;
 		transform: translateY(-2px);
 	}
 
 	.footer-bottom {
-		background: rgba(var(--gray-light), 0.05);
+		background: rgba(0, 0, 0, 0.1);
 		padding: 1.5em 1.5em;
 		text-align: center;
-		border-top: 1px solid rgba(var(--gray-light), 0.2);
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
 	}
 
 	.footer-bottom p {
 		margin: 0;
-		color: rgb(var(--gray));
+		color: rgba(255, 255, 255, 0.85);
 		font-size: 0.9em;
 	}
 

@@ -27,34 +27,7 @@
 	--scouting-accent: #90EE90;
 }
 
-/* Dark mode */
-[data-theme="dark"] {
-	--black: 240, 240, 245;
-	--gray: 150, 150, 160;
-	--gray-light: 30, 35, 45;
-	--gray-dark: 210, 215, 225;
-	--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
-	
-	/* Telecom theme dark mode - ZELENA UMJESTO PLAVE */
-	--telecom-primary: #00FF88;
-	--telecom-secondary: #FF6B35;
-	--telecom-accent: #2D5016;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
-		--black: 240, 240, 245;
-		--gray: 150, 150, 160;
-		--gray-light: 30, 35, 45;
-		--gray-dark: 210, 215, 225;
-		--gray-gradient: rgba(20, 25, 35, 50%), #0a0e1a;
-		
-		/* Telecom theme dark mode - ZELENA */
-		--telecom-primary: #00FF88;
-		--telecom-secondary: #FF6B35;
-		--telecom-accent: #2D5016;
-	}
-}
+/* Dark mode - DISABLED */
 @font-face {
 	font-family: "Atkinson";
 	src: url("/fonts/atkinson-regular.woff") format("woff");

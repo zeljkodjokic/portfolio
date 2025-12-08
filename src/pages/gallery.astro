@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Galerija"
+	description="Galerija fotografija i media sadržaja"
+>
+	<div class="gallery-content">
+		<section class="section">
+			<h2>Galerija</h2>
+			<p>
+				Galerija sa fotografijama, video snimcima i media sadržajem iz mih aktivnosti 
+				i iskustava - radio amaterizam, iviđastvo i tehnologije.
+			</p>
+		</section>
+
+		<section class="section">
+			<h2>Fotografije</h2>
+			<div class="gallery-grid">
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>📻</span>
+					</div>
+					<p>Radio oprema</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>📡</span>
+					</div>
+					<p>Antene i Signal</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>🏕️</span>
+					</div>
+					<p>Iviđački kamp</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>⛺</span>
+					</div>
+					<p>Outdoor aktivnosti</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>🔐</span>
+					</div>
+					<p>Sajber bezbednost</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>💻</span>
+					</div>
+					<p>Softverski projekti</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>🛠️</span>
+					</div>
+					<p>DIY projekti</p>
+				</div>
+				<div class="gallery-item">
+					<div class="image-placeholder">
+						<span>📸</span>
+					</div>
+					<p>Ostatak</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>Kako dodati fotografije</h2>
+			<p>
+				Za dodavanje vlastitih fotografija:
+			</p>
+			<ol>
+				<li>Kreiraj folder <code>public/gallery/</code> ako ne postoji</li>
+				<li>Dodaj slike u taj folder (npr. <code>public/gallery/photo1.jpg</code>)</li>
+				<li>Uredi ovu stranicu i zameni <code>&lt;div class="image-placeholder"&gt;</code> sa <code>&lt;img&gt;</code> tagom</li>
+				<li>Primer: <code>&lt;img src="/gallery/photo1.jpg" alt="Opis" /&gt;</code></li>
+			</ol>
+		</section>
+
+		<section class="section">
+			<h2>Video sadržaj</h2>
+			<p>
+				Linkovi na video kanale ili YouTube playlistse mogu biti dodati ovde.
+			</p>
+		</section>
+
+		<section class="section">
+			<h2>Drustvene mreže</h2>
+			<p>
+				Prati me na društvenim mrežama za više sadržaja i ažuriranja:
+			</p>
+			<ul>
+				<li>YouTube</li>
+				<li>Instagram</li>
+				<li>Twitter / X</li>
+				<li>TikTok</li>
+			</ul>
+		</section>
+	</div>
+
+	<style>
+		.gallery-content {
+			font-size: 1rem;
+		}
+		.section {
+			margin-bottom: 2.5rem;
+			padding-bottom: 1.5rem;
+			border-bottom: 2px solid rgb(var(--gray-light));
+		}
+		.section:last-child {
+			border-bottom: none;
+		}
+		.section h2 {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			gap: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		.gallery-item {
+			text-align: center;
+			transition: transform 0.3s ease;
+		}
+		.gallery-item:hover {
+			transform: scale(1.05);
+		}
+		.image-placeholder {
+			width: 100%;
+			aspect-ratio: 1;
+			background: linear-gradient(135deg, rgb(var(--gray-light), 0.2), rgb(var(--gray-light), 0.05));
+			border: 2px solid rgb(var(--gray-light));
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 3rem;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.gallery-item:hover .image-placeholder {
+			border-color: rgb(var(--black));
+			background: linear-gradient(135deg, rgb(var(--gray-light), 0.3), rgb(var(--gray-light), 0.1));
+		}
+		.gallery-item img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 8px;
+			border: 2px solid rgb(var(--gray-light));
+			transition: all 0.3s ease;
+		}
+		.gallery-item img:hover {
+			border-color: rgb(var(--black));
+			box-shadow: 0 4px 12px rgba(var(--black), 0.1);
+		}
+		.gallery-item p {
+			margin-top: 0.8rem;
+			font-weight: 500;
+			color: rgb(var(--gray-dark));
+		}
+		.section ol {
+			margin-left: 1.5rem;
+			line-height: 1.8;
+		}
+		.section li {
+			margin-bottom: 0.5rem;
+		}
+		.section code {
+			background: rgb(var(--gray-light), 0.1);
+			padding: 0.2rem 0.5rem;
+			border-radius: 3px;
+			font-family: monospace;
+		}
+		.section ul {
+			margin-left: 1.5rem;
+			line-height: 1.8;
+		}
+	</style>
+</Layout>

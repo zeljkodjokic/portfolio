@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Portfolio - Moji projekti"
+	description="Projekti i softveri koje sam napravio"
+>
+	<div class="portfolio-content">
+		<section class="section">
+			<h2>O mom portfolio-u</h2>
+			<p>
+				Ovde možete videti projekte na kojima sam radio. Svaki projekt predstavlja iskustvo i znanje 
+				koje sam stekao kroz razvoj softvera.
+			</p>
+		</section>
+
+		<section class="section">
+			<h2>Softverski projekti</h2>
+			<div class="projects-grid">
+				<div class="project-card">
+					<h3>Projekat 1</h3>
+					<p class="tech-stack"><strong>Tehnologije:</strong> HTML, CSS, JavaScript</p>
+					<p>
+						Opis projekta će biti dostupan. Ovde možete dodati detaljne informacije 
+						o tome šta radi projekat i kako ga koristiti.
+					</p>
+					<div class="project-links">
+						<a href="#" class="btn-link">GitHub</a>
+						<a href="#" class="btn-link">Demo</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Projekat 2</h3>
+					<p class="tech-stack"><strong>Tehnologije:</strong> React, Node.js, MongoDB</p>
+					<p>
+						Opis projekta će biti dostupan. Ovde možete dodati detaljne informacije 
+						o tome šta radi projekat i kako ga koristiti.
+					</p>
+					<div class="project-links">
+						<a href="#" class="btn-link">GitHub</a>
+						<a href="#" class="btn-link">Demo</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Projekat 3</h3>
+					<p class="tech-stack"><strong>Tehnologije:</strong> Python, Flask, PostgreSQL</p>
+					<p>
+						Opis projekta će biti dostupan. Ovde možete dodati detaljne informacije 
+						o tome šta radi projekat i kako ga koristiti.
+					</p>
+					<div class="project-links">
+						<a href="#" class="btn-link">GitHub</a>
+						<a href="#" class="btn-link">Demo</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>Tehnologije koje koristim</h2>
+			<div class="tech-list">
+				<div class="tech-category">
+					<h3>Frontend</h3>
+					<ul>
+						<li>HTML / CSS / JavaScript</li>
+						<li>React</li>
+						<li>Astro</li>
+						<li>Vue</li>
+						<li>TypeScript</li>
+					</ul>
+				</div>
+				<div class="tech-category">
+					<h3>Backend</h3>
+					<ul>
+						<li>Node.js</li>
+						<li>Python</li>
+						<li>Express.js</li>
+						<li>Flask</li>
+						<li>REST API</li>
+					</ul>
+				</div>
+				<div class="tech-category">
+					<h3>Baze podataka</h3>
+					<ul>
+						<li>MongoDB</li>
+						<li>PostgreSQL</li>
+						<li>MySQL</li>
+						<li>SQLite</li>
+					</ul>
+				</div>
+				<div class="tech-category">
+					<h3>Alati</h3>
+					<ul>
+						<li>Git / GitHub</li>
+						<li>Docker</li>
+						<li>VS Code</li>
+						<li>Linux</li>
+						<li>npm / yarn</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>Želite saradnju?</h2>
+			<p>
+				Ako ste zainteresovani za saradnju ili imate pitanja o mojim projektima, 
+				slobodno me <a href="/contact">kontaktirajte</a>.
+			</p>
+		</section>
+	</div>
+
+	<style>
+		.portfolio-content {
+			font-size: 1rem;
+		}
+		.section {
+			margin-bottom: 2.5rem;
+			padding-bottom: 1.5rem;
+			border-bottom: 2px solid rgb(var(--gray-light));
+		}
+		.section:last-child {
+			border-bottom: none;
+		}
+		.section h2 {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		.project-card {
+			padding: 1.5rem;
+			border: 2px solid rgb(var(--gray-light));
+			border-radius: 8px;
+			transition: all 0.3s ease;
+			display: flex;
+			flex-direction: column;
+		}
+		.project-card:hover {
+			border-color: rgb(var(--black));
+			box-shadow: 0 4px 12px rgba(var(--black), 0.1);
+		}
+		.project-card h3 {
+			font-size: 1.3rem;
+			margin-bottom: 0.5rem;
+		}
+		.project-card p {
+			color: rgb(var(--gray-dark));
+			line-height: 1.6;
+			margin-bottom: 0.8rem;
+		}
+		.tech-stack {
+			font-size: 0.95rem;
+			font-style: italic;
+		}
+		.project-links {
+			display: flex;
+			gap: 1rem;
+			margin-top: auto;
+		}
+		.btn-link {
+			display: inline-block;
+			padding: 0.5rem 1rem;
+			background-color: #0891b2;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+			font-weight: 500;
+			transition: background-color 0.2s ease;
+		}
+		.btn-link:hover {
+			background-color: #0369a1;
+		}
+		.tech-list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 2rem;
+		}
+		.tech-category h3 {
+			font-size: 1.2rem;
+			margin-bottom: 0.8rem;
+		}
+		.tech-category ul {
+			margin-left: 1.5rem;
+			line-height: 1.8;
+		}
+		.tech-category li {
+			margin-bottom: 0.5rem;
+		}
+		.section a {
+			color: #0891b2;
+			text-decoration: none;
+		}
+		.section a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</Layout>

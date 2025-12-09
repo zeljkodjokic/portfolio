@@ -164,8 +164,8 @@ const today = new Date();
 	}
 
 	.social-links {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		gap: 0.8em;
 		margin-top: 0.5em;
 		max-width: 200px;
@@ -186,15 +186,12 @@ const today = new Date();
 		flex-shrink: 0;
 	}
 
-	.social-links a:nth-child(5) {
-		margin-right: 0;
-	}
-
 	.social-links a:hover {
 		background: rgba(255, 255, 255, 0.3);
 		color: white;
 		border-color: white;
 		transform: translateY(-3px);
+	}
 	}
 
 	.social-links img {

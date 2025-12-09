@@ -242,8 +242,10 @@ const today = new Date();
 
 	@media (max-width: 480px) {
 		.footer-container {
-			grid-template-columns: 1fr;
+			display: flex;
+			flex-direction: column;
 			padding: 1.5em 1em;
+			gap: 1.5em;
 		}
 
 		.social-links {

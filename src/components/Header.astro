@@ -8,7 +8,7 @@ import { SITE_TITLE } from '../consts';
 		<div class="header-left">
 			<h2><a href="/">{SITE_TITLE}</a></h2>
 		</div>
-		<nav class="internal-links">
+		<nav class="internal-links" id="nav-menu">
 			<HeaderLink href="/o-meni">O meni</HeaderLink>
 			<HeaderLink href="/portfolio">Portfolio</HeaderLink>
 			<HeaderLink href="/radio-amaterizam">Radio amaterizam</HeaderLink>
@@ -18,6 +18,11 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/galerija">Galerija</HeaderLink>
 			<HeaderLink href="/kontakt">Kontakt</HeaderLink>
 		</nav>
+		<button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	</div>
 </header>
 
@@ -36,8 +41,8 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1.5em;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 1em;
+		justify-content: flex-start;
+		gap: 3em;
 		box-sizing: border-box;
 	}
 
@@ -76,7 +81,7 @@ import { SITE_TITLE } from '../consts';
 		padding: 0.6em 0.8em;
 		color: white;
 		text-decoration: none;
-		border-radius: 4px;
+		border-radius: 0;
 		transition: all 0.3s ease;
 		font-weight: 500;
 		font-size: 0.9em;
@@ -91,19 +96,78 @@ import { SITE_TITLE } from '../consts';
 
 	.internal-links :global(a.active) {
 		color: white;
-		border-bottom: 2px solid white;
+	}
+
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5em;
+	}
+
+	.hamburger span {
+		width: 25px;
+		height: 3px;
+		background: white;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+
+	.hamburger.active span:nth-child(1) {
+		transform: rotate(45deg) translate(8px, 8px);
+	}
+
+	.hamburger.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
 	}
 
 	@media (max-width: 768px) {
 		.header-container {
-			flex-wrap: wrap;
+			justify-content: space-between;
 			gap: 1em;
 		}
 
 		.internal-links {
+			position: absolute;
+			top: 60px;
+			left: 0;
+			right: 0;
+			background: var(--telecom-primary);
+			flex-direction: column;
+			gap: 0;
 			width: 100%;
-			order: 3;
-			justify-content: flex-start;
+			padding: 1em 0;
+			box-sizing: border-box;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+		}
+
+		.internal-links.active {
+			max-height: 500px;
+		}
+
+		.internal-links :global(a) {
+			width: 100%;
+			padding: 1em 1.5em;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 0;
+		}
+
+		.hamburger {
+			display: flex;
+			margin-left: auto;
+		}
+
+		h2 {
+			font-size: 1em;
 		}
 	}
 
@@ -112,16 +176,37 @@ import { SITE_TITLE } from '../consts';
 			padding: 0 1em;
 		}
 
-		.internal-links {
-			gap: 0;
+		h2 {
+			font-size: 0.95em;
 		}
 
 		.internal-links :global(a) {
-			padding: 0.5em 0.8em;
-			font-size: 0.85em;
+			padding: 0.8em 1.5em;
+			font-size: 0.9em;
 		}
 	}
 </style>
+
+<script>
+	const hamburgerBtn = document.getElementById('hamburger-btn');
+	const navMenu = document.getElementById('nav-menu');
+
+	if (hamburgerBtn && navMenu) {
+		hamburgerBtn.addEventListener('click', () => {
+			hamburgerBtn.classList.toggle('active');
+			navMenu.classList.toggle('active');
+		});
+
+		// Zatvori meni kada se klikne na link
+		const navLinks = navMenu.querySelectorAll('a');
+		navLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				hamburgerBtn.classList.remove('active');
+				navMenu.classList.remove('active');
+			});
+		});
+	}
+</script>
 
 
 

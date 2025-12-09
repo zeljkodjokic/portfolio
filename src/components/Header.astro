@@ -96,7 +96,10 @@ import { SITE_TITLE } from '../consts';
 
 	.internal-links :global(a.active) {
 		color: white;
-		border-bottom: 2px solid transparent;
+	}
+
+	.internal-links :global(a.active:hover) {
+		border-bottom-color: transparent;
 	}
 
 	.hamburger {

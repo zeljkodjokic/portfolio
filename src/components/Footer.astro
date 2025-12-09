@@ -112,9 +112,9 @@ const today = new Date();
 		width: 100%;
 		margin: 0 auto;
 		padding: 3em 1.5em;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 3em;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
 		box-sizing: border-box;
 	}
 
@@ -221,9 +221,8 @@ const today = new Date();
 
 	@media (max-width: 768px) {
 		.footer-container {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1.5em;
 			padding: 2em 1em;
+			gap: 1.5em;
 		}
 
 		.footer-section h3 {
@@ -242,9 +241,7 @@ const today = new Date();
 
 	@media (max-width: 480px) {
 		.footer-container {
-			grid-template-columns: 1fr;
 			padding: 1.5em 1em;
-			gap: 1.5em;
 		}
 
 		.social-links {

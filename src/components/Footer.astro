@@ -9,11 +9,11 @@ const today = new Date();
 			<p>YT3YT - Entuzijasta tehnologije</p>
 			<p class="location">Srbija 🇷🇸</p>
 			<div class="social-links">
-				<a href="https://github.com/zeljkodjokic" target="_blank" title="GitHub">
-					<img src="/icons/github.svg" alt="GitHub" />
-				</a>
 				<a href="https://linkedin.com/in/zeljkodjokic" target="_blank" title="LinkedIn">
 					<img src="/icons/linkedin.svg" alt="LinkedIn" />
+				</a>
+				<a href="https://facebook.com/yt3yt" target="_blank" title="Facebook">
+					<img src="/icons/facebook.svg" alt="Facebook" />
 				</a>
 				<a href="https://instagram.com/zeljko_djokic" target="_blank" title="Instagram">
 					<img src="/icons/instagram.svg" alt="Instagram" />
@@ -21,20 +21,29 @@ const today = new Date();
 				<a href="https://x.com/zeljkodjokic4" target="_blank" title="X (Twitter)">
 					<img src="/icons/x.svg" alt="X" />
 				</a>
-				<a href="https://facebook.com/yt3yt" target="_blank" title="Facebook">
-					<img src="/icons/facebook.svg" alt="Facebook" />
-				</a>
 				<a href="https://reddit.com/u/zdjokic" target="_blank" title="Reddit">
 					<img src="/icons/reddit.svg" alt="Reddit" />
 				</a>
-				<a href="https://hackthebox.com/users/zeljkodjokic" target="_blank" title="HackTheBox">
-					<img src="/icons/hackthebox.svg" alt="HackTheBox" />
+				<a href="https://www.qrzcq.com/call/YT3YT" target="_blank" title="QRZ.CQ">
+					<img src="/icons/qrzcq.png" alt="QRZ.CQ" />
+				</a>
+				<a href="https://www.qrz.com/db/YT3YT" target="_blank" title="QRZ">
+					<img src="/icons/qrz.png" alt="QRZ" />
+				</a>
+				<a href="https://www.hamqth.com/YT3YT" target="_blank" title="HamQTH">
+					<img src="/icons/hamqth.png" alt="HamQTH" />
+				</a>
+				<a href="https://github.com/zeljkodjokic" target="_blank" title="GitHub">
+					<img src="/icons/github.svg" alt="GitHub" />
+				</a>
+				<a href="https://leetcode.com/zeljkodjokic" target="_blank" title="LeetCode">
+					<img src="/icons/leetcode.svg" alt="LeetCode" />
 				</a>
 				<a href="https://tryhackme.com/p/zeljkodjokic" target="_blank" title="TryHackMe">
 					<img src="/icons/tryhackme.svg" alt="TryHackMe" />
 				</a>
-				<a href="https://leetcode.com/zeljkodjokic" target="_blank" title="LeetCode">
-					<img src="/icons/leetcode.svg" alt="LeetCode" />
+				<a href="https://hackthebox.com/users/zeljkodjokic" target="_blank" title="HackTheBox">
+					<img src="/icons/hackthebox.svg" alt="HackTheBox" />
 				</a>
 			</div>
 		</div>
@@ -159,6 +168,7 @@ const today = new Date();
 		flex-wrap: wrap;
 		gap: 0.8em;
 		margin-top: 0.5em;
+		max-width: 200px;
 	}
 
 	.social-links a {
@@ -176,6 +186,10 @@ const today = new Date();
 		flex-shrink: 0;
 	}
 
+	.social-links a:nth-child(5) {
+		margin-right: 0;
+	}
+
 	.social-links a:hover {
 		background: rgba(255, 255, 255, 0.3);
 		color: white;
@@ -186,6 +200,8 @@ const today = new Date();
 	.social-links img {
 		width: 24px;
 		height: 24px;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	.footer-bottom {

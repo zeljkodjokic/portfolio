@@ -179,7 +179,8 @@ const today = new Date();
 
 	.social-links {
 		display: flex;
-		gap: 1em;
+		flex-wrap: wrap;
+		gap: 0.8em;
 		margin-top: 0.5em;
 	}
 
@@ -187,14 +188,15 @@ const today = new Date();
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 45px;
-		height: 45px;
+		width: 40px;
+		height: 40px;
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 50%;
 		color: white;
 		transition: all 0.3s ease;
 		text-decoration: none;
 		border: 2px solid transparent;
+		flex-shrink: 0;
 	}
 
 	.social-links a:hover {
@@ -227,12 +229,39 @@ const today = new Date();
 		.footer-section h3 {
 			font-size: 1.1em;
 		}
+
+		.social-links {
+			gap: 0.6em;
+		}
+
+		.social-links a {
+			width: 36px;
+			height: 36px;
+		}
 	}
 
 	@media (max-width: 480px) {
 		.footer-container {
 			grid-template-columns: 1fr;
 			padding: 1.5em 1em;
+			gap: 1.5em;
+		}
+
+		.social-links {
+			gap: 0.5em;
+		}
+
+		.social-links a {
+			width: 34px;
+			height: 34px;
+		}
+
+		.footer-section h3 {
+			font-size: 1em;
+		}
+
+		.footer-section p {
+			font-size: 0.9em;
 		}
 	}
 </style>

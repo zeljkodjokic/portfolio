@@ -143,15 +143,17 @@ import { SITE_TITLE } from '../consts';
 			flex-direction: column;
 			gap: 0;
 			width: 100%;
-			padding: 1em 0;
+			padding: 0;
 			box-sizing: border-box;
 			max-height: 0;
 			overflow: hidden;
 			transition: max-height 0.3s ease;
+			z-index: 999;
 		}
 
 		.internal-links.active {
 			max-height: 500px;
+			padding: 1em 0;
 		}
 
 		.internal-links :global(a) {
@@ -159,6 +161,7 @@ import { SITE_TITLE } from '../consts';
 			padding: 1em 1.5em;
 			border-bottom: none;
 			border-radius: 0;
+			border-bottom: none !important;
 		}
 
 		.hamburger {

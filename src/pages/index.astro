@@ -15,6 +15,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				padding: 2em 1em;
 				max-width: 1000px;
 				margin: 0 auto;
+				box-sizing: border-box;
+				width: 100%;
 			}
 			.hero {
 				text-align: center;
@@ -122,6 +124,79 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			.cta a:hover {
 				text-decoration: underline;
+			}
+
+			/* Tablet responsiveness */
+			@media (max-width: 768px) {
+				main {
+					padding: 1.5em 1em;
+				}
+				.hero h1 {
+					font-size: 2.2rem;
+				}
+				.hero .subtitle {
+					font-size: 1.1rem;
+				}
+				.welcome h2 {
+					font-size: 1.5rem;
+				}
+				.highlights h2 {
+					font-size: 1.5rem;
+				}
+				.highlight-card h3 {
+					font-size: 1.1rem;
+				}
+				.cta h2 {
+					font-size: 1.5rem;
+				}
+			}
+
+			/* Mobile responsiveness */
+			@media (max-width: 480px) {
+				main {
+					padding: 1em;
+				}
+				.hero {
+					padding: 1em 0;
+					margin-bottom: 2em;
+				}
+				.hero h1 {
+					font-size: 1.8rem;
+				}
+				.hero .subtitle {
+					font-size: 1rem;
+				}
+				.welcome h2 {
+					font-size: 1.3rem;
+				}
+				.welcome p {
+					font-size: 1rem;
+				}
+				.highlights h2 {
+					font-size: 1.3rem;
+				}
+				.highlight-grid {
+					grid-template-columns: 1fr;
+					gap: 1em;
+				}
+				.highlight-card {
+					padding: 1em;
+				}
+				.blog-preview {
+					padding: 1em;
+				}
+				.blog-preview h2 {
+					font-size: 1.3rem;
+				}
+				.cta {
+					padding: 1.5em;
+				}
+				.cta h2 {
+					font-size: 1.3rem;
+				}
+				.cta p {
+					font-size: 1rem;
+				}
 			}
 		</style>
 	</head>

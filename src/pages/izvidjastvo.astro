@@ -94,5 +94,44 @@ import Layout from '../layouts/Layout.astro';
 		.skills-box ul {
 			margin-left: 1.5rem;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.3rem;
+			}
+			.skills-box {
+				padding-left: 0.5rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.2rem;
+			}
+			.section ul {
+				margin-left: 1rem;
+				line-height: 1.6;
+			}
+			.section li {
+				margin-bottom: 0.3rem;
+				font-size: 0.95rem;
+			}
+			.skills-box {
+				margin-bottom: 1rem;
+				padding-left: 0;
+			}
+			.skills-box h3 {
+				font-size: 0.95rem;
+			}
+			.skills-box ul {
+				margin-left: 1rem;
+			}
+		}
 	</style>
 </Layout>

@@ -109,5 +109,47 @@ import Layout from '../layouts/Layout.astro';
 		.section li {
 			margin-bottom: 0.5rem;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.5rem;
+			}
+			.skills h3 {
+				font-size: 1rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.3rem;
+			}
+			.education-item {
+				margin-bottom: 1rem;
+			}
+			.skills {
+				margin-bottom: 0.8rem;
+			}
+			.skills h3 {
+				font-size: 0.95rem;
+			}
+			.skills ul {
+				margin-left: 1rem;
+				line-height: 1.6;
+			}
+			.section ul {
+				margin-left: 1rem;
+				line-height: 1.6;
+			}
+			.section li {
+				margin-bottom: 0.3rem;
+				font-size: 0.95rem;
+			}
+		}
 	</style>
 </Layout>

@@ -201,5 +201,58 @@ import Layout from '../layouts/Layout.astro';
 		.section a:hover {
 			text-decoration: underline;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.5rem;
+			}
+			.projects-grid {
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1rem;
+			}
+			.project-card {
+				padding: 1rem;
+			}
+			.tech-list {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.3rem;
+			}
+			.projects-grid {
+				grid-template-columns: 1fr;
+				gap: 1rem;
+			}
+			.project-card {
+				padding: 1rem;
+			}
+			.project-card h3 {
+				font-size: 1.1rem;
+			}
+			.project-links {
+				flex-wrap: wrap;
+			}
+			.btn-link {
+				padding: 0.4rem 0.8rem;
+				font-size: 0.9rem;
+			}
+			.tech-list {
+				grid-template-columns: 1fr;
+				gap: 1rem;
+			}
+			.tech-category ul {
+				margin-left: 1rem;
+			}
+		}
 	</style>
 </Layout>

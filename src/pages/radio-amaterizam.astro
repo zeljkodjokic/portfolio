@@ -75,5 +75,31 @@ import Layout from '../layouts/Layout.astro';
 		.section li {
 			margin-bottom: 0.5rem;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.3rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.2rem;
+			}
+			.section ul {
+				margin-left: 1rem;
+				line-height: 1.6;
+			}
+			.section li {
+				margin-bottom: 0.3rem;
+				font-size: 0.95rem;
+			}
+		}
 	</style>
 </Layout>

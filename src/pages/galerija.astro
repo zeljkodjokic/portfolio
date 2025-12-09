@@ -183,5 +183,47 @@ import Layout from '../layouts/Layout.astro';
 			margin-left: 1.5rem;
 			line-height: 1.8;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.5rem;
+			}
+			.gallery-grid {
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+				gap: 1rem;
+			}
+			.image-placeholder {
+				font-size: 2.5rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.3rem;
+			}
+			.gallery-grid {
+				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+				gap: 0.8rem;
+			}
+			.image-placeholder {
+				font-size: 2rem;
+			}
+			.gallery-item p {
+				font-size: 0.9rem;
+				margin-top: 0.5rem;
+			}
+			.section ol {
+				margin-left: 1rem;
+			}
+			.section ul {
+				margin-left: 1rem;
+			}
+		}
 	</style>
 </Layout>

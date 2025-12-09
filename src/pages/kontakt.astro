@@ -134,5 +134,47 @@ import Layout from '../layouts/Layout.astro';
 		.section a:hover {
 			text-decoration: underline;
 		}
+
+		/* Tablet responsiveness */
+		@media (max-width: 768px) {
+			.section h2 {
+				font-size: 1.3rem;
+			}
+			.contact-item {
+				padding: 0.8rem;
+			}
+			.contact-item h3 {
+				font-size: 1rem;
+			}
+			.section ul {
+				margin-left: 1rem;
+			}
+		}
+
+		/* Mobile responsiveness */
+		@media (max-width: 480px) {
+			.section {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+			}
+			.section h2 {
+				font-size: 1.2rem;
+			}
+			.contact-item {
+				padding: 0.7rem;
+				margin-bottom: 1rem;
+			}
+			.contact-item h3 {
+				font-size: 0.95rem;
+			}
+			.section ul {
+				margin-left: 0.75rem;
+				line-height: 1.6;
+			}
+			.section li {
+				margin-bottom: 0.4rem;
+				font-size: 0.95rem;
+			}
+		}
 	</style>
 </Layout>
